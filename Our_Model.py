@@ -553,13 +553,17 @@ class Model:
         del self.Cov_Mu
         del self.temp_diff_Mu_XBeta
         del self.temp_diff_Mu_XBeta_sample
-        del self.temp_Theta_Eta_ThetaT
-        del self.temp_Theta_Eta_ThetaT_sample
         del self.Mu_temp
         del self.Theta_temp
-        del self.Hessian_temp_A_P
-        del self.Hessian_temp_A_PP
-        del self.Hessian_temp_Theta_Eta
+        
+        try:
+            del self.temp_Theta_Eta_ThetaT
+            del self.temp_Theta_Eta_ThetaT_sample
+            del self.Hessian_temp_A_P
+            del self.Hessian_temp_A_PP
+            del self.Hessian_temp_Theta_Eta
+        except:
+            None
     
     
         
